@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<!--Developer:  Frankie Barrios
+    Date:       4/18/2018
+    Purpose:    Index page for site.
+-->
+
+<head>
+  <meta charset="utf-8">
+  <title>Shop Mens</title>
+  <link href="styles.css" rel="stylesheet">
+  <link href="slideshowHome.css" rel="stylesheet">
+  <!-- Parallax Styling -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body,
+    html {
+      height: 100%;
+      margin: 0;
+      font: 400 15px/1.8 "Lato", sans-serif;
+      color: #777;
+    }
+
+    .bgimg-1,
+    .bgimg-2,
+    .bgimg-3 {
+      position: relative;
+      opacity: 0.65;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+    }
+
+    .bgimg-1 {
+      background-image: url("par1.jpg");
+      min-height: 100%;
+    }
+
+    .bgimg-2 {
+      background-image: url("par3.jpg");
+      min-height: 400px;
+    }
+
+    .bgimg-3 {
+      background-image: url("par2.jpg");
+      min-height: 400px;
+    }
+
+    .caption {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 100%;
+      text-align: center;
+      color: #000;
+    }
+
+    .caption span.border {
+      background-color: #111;
+      color: #fff;
+      padding: 18px;
+      font-size: 25px;
+      letter-spacing: 10px;
+    }
+
+    h3 {
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      font: 20px "Lato", sans-serif;
+      color: #111;
+    }
+
+    /* Turn off parallax scrolling for tablets and phones */
+
+    @media only screen and (max-device-width: 1024px) {
+      .bgimg-1,
+      .bgimg-2,
+      .bgimg-3 {
+        background-attachment: scroll;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Top Menu HTML -->
+  <div class="topnav" id="myTopnav">
+    <a href="index.html" class="active">Home</a>
+    <a href="fitness.html">Fitness</a>
+    <a href="aboutMe.html">About Me</a>
+    <!--<div class="dropdown">
+      <button class="dropbtn">Shop
+      <i class="fa fa-caret-down"></i>
+    </button>
+      <div class="dropdown-content">
+        <a href="shopMen.html">Men</a>
+        <a href="shopWomen.html">Women</a>
+        <a href="shopAccessories.html">Accessories</a>
+      </div>
+    </div>-->
+    <a href="signUp.html">Sign Up</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+
+    <div class="dropdown">
+      <button class="dropbtn">Shop
+      <i class="fa fa-caret-down"></i>
+    </button>
+      <div class="dropdown-content">
+        <a href="shopMen.html">Men</a>
+        <a href="shopWomen.html">Women</a>
+        <a href="shopAccessories.html">Accessories</a>
+      </div>
+    </div>
+  </div>
+  <!--</div>-->
+
+  <!-- Top Menu JS -->
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
+
+
+  <!-- Parallax HTML -->
+  <div class="bgimg-1">
+    <div class="caption">
+      <span class="border">SCROLL DOWN</span>
+    </div>
+  </div>
+
+  <div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+    <h3 style="text-align:center;">Live Unafraid, Die Strong</h3>
+    <p></p>
+  </div>
+
+  <div class="bgimg-2">
+    <div class="caption">
+      <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">LESS HEIGHT</span>
+    </div>
+  </div>
+
+
+
+  </div>
+
+  <div style="position:relative;">
+    <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+      <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- Bottom Tab Headers HTML -->
+  <div id="London" class="tabcontent">
+    <h3>Home</h3>
+    <p>Look into adding side by side images here!</p>
+  </div>
+
+  <div id="Paris" class="tabcontent">
+    <h3>Fitness</h3>
+    <p>Link to fitness page here.</p>
+  </div>
+
+  <div id="Tokyo" class="tabcontent">
+    <h3>About Me</h3>
+    <p>Info about owner here</p>
+  </div>
+
+  <div id="Oslo" class="tabcontent">
+    <h3>Sign Up</h3>
+    <p>Link to newsletter sign up page here.</p>
+  </div>
+
+  <button class="tablink" onclick="openCity('London', this, '#2F4F4F')" id="defaultOpen">Home</button>
+  <button class="tablink" onclick="openCity('Paris', this, 'black')">Fitness</button>
+  <button class="tablink" onclick="openCity('Tokyo', this, '#2F4F4F')">About Me</button>
+  <button class="tablink" onclick="openCity('Oslo', this, 'black')">Sign Up</button>
+
+
+  <!-- Bottom Tab Headers Menu JS -->
+  <script>
+    function openCity(cityName, elmnt, color) {
+      // Hide all elements with class="tabcontent" by default */
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+
+      // Remove the background color of all tablinks/buttons
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+      }
+
+      // Show the specific tab content
+      document.getElementById(cityName).style.display = "block";
+
+      // Add the specific color to the button used to open the tab content
+      elmnt.style.backgroundColor = color;
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+  </script>
+</body>
+
+</html>

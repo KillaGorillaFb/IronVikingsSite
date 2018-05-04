@@ -110,124 +110,130 @@
       <i class="fa fa-caret-down"></i>
     </button>
       <div class="dropdown-content">
-        <a href="shopMen.html">Men</a>
-        <a href="shopWomen.html">Women</a>
-        <a href="shopAccessories.html">Accessories</a>
+          <a href="shopMen.html">Men</a>
+          <a href="shopWomen.html">Women</a>
+          <a href="shopAccessories.html">Accessories</a>
+        </div>
       </div>
     </div>
-  </div>
-  <!--</div>-->
+    <!--</div>-->
 
-  <!-- Top Menu JS -->
-  <script>
-    function myFunction() {
-      var x = document.getElementById("myTopnav");
-      if (x.className === "topnav") {
-        x.className += " responsive";
-      } else {
-        x.className = "topnav";
+    <!-- Top Menu JS -->
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
       }
-    }
-  </script>
+    </script>
 
-<!-- Slideshow -->
+    <!-- Slideshow -->
 
-<div class="slideshow-container">
+    <div class="slideshow-container">
 
-<div class="mySlides fade">
-  <div class="numbertext"></div>
-  <img src="logo.png" style="height: 600px; width:100%">
-  <div class="text">Live Unafraid, Die Strong</div>
-</div>
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="logo.png" style="height: 600px; width:100%">
+        <div class="text">Live Unafraid, Die Strong</div>
+      </div>
 
-<div class="mySlides fade">
-  <div class="numbertext"></div>
-  <img src="slide1.jpg" style="height: 600px; width:100%">
-  <div class="text">Function Over Physique</div>
-</div>
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="slide1.jpg" style="height: 600px; width:100%">
+        <div class="text">Function Over Physique</div>
+      </div>
 
-<div class="mySlides fade">
-  <div class="numbertext"></div>
-  <img src="slide3.jpg" style="height: 600px; width:100%">
-  <div class="text">Discover Yourself</div>
-</div>
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="slide3.jpg" style="height: 600px; width:100%">
+        <div class="text">Discover Yourself</div>
+      </div>
 
-<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-<a class="next" onclick="plusSlides(1)">&#10095;</a>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
-</div>
-<br>
-
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
-</div>
-
-<!-- Slideshow JS -->
-<script>
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
-
-<!--Auto Slideshow Code-->
-var slideIndex = 0;
-showSlides();
-
-function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}
-    slides[slideIndex-1].style.display = "block";
-    setTimeout(showSlides, 4000); // Change image every 3 seconds
-}
-</script>
-
-
-  <!-- Parallax HTML -->
-  <div class="bgimg-1">
-    <div class="caption">
-      <span class="border">SCROLL DOWN</span>
     </div>
-  </div>
+    <br>
 
-  <div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
-    <h3 style="text-align:center;">Live Unafraid, Die Strong</h3>
-    <p></p>
-  </div>
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
 
-  <div class="bgimg-2">
+    <!-- Slideshow JS -->
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1
+        }
+        if (n < 1) {
+          slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+
+      <!--Auto Slideshow Code-->
+      var slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 4000); // Change image every 3 seconds
+      }
+    </script>
+
+
+    <!-- Parallax HTML -->
+    <div class="bgimg-1">
+      <div class="caption">
+        <span class="border">SCROLL DOWN</span>
+      </div>
+    </div>
+
+    <div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+      <h3 style="text-align:center;">Live Unafraid, Die Strong</h3>
+      <p></p>
+    </div>
+
+    <!--  <div class="bgimg-2">
     <div class="caption">
       <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">LESS HEIGHT</span>
     </div>
-  </div>
+  </div>-->
 
 
 
@@ -235,23 +241,27 @@ function showSlides() {
 
   <div style="position:relative;">
     <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
-      <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
+      <!--<p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>-->
     </div>
   </div>
 
 
+  <div class="topnav" id="myTopnav">
+    <a href="#home" class="active">Home</a>
+    <a href="fitness.html">Fitness</a>
+    <a href="aboutMe.html">About Me</a>
+    <a href="signUp.html">Sign Up</a>
 
 
-
-  <!-- Bottom Tab Headers HTML -->
-  <div id="London" class="tabcontent">
+    <!-- Bottom Tab Headers HTML -->
+    <!--<div id="London" class="tabcontent">
     <h3>Home</h3>
     <p>Look into adding side by side images here!</p>
   </div>
 
   <div id="Paris" class="tabcontent">
-    <h3>Fitness</h3>
-    <p>Link to fitness page here.</p>
+
+    <a href="fitness.html" style="color:black; font-size:29px;">Need help getting started in Fitness? Click HereQ</a>
   </div>
 
   <div id="Tokyo" class="tabcontent">
@@ -267,11 +277,11 @@ function showSlides() {
   <button class="tablink" onclick="openCity('London', this, '#2F4F4F')" id="defaultOpen">Home</button>
   <button class="tablink" onclick="openCity('Paris', this, 'black')">Fitness</button>
   <button class="tablink" onclick="openCity('Tokyo', this, '#2F4F4F')">About Me</button>
-  <button class="tablink" onclick="openCity('Oslo', this, 'black')">Sign Up</button>
+  <button class="tablink" onclick="openCity('Oslo', this, 'black')">Sign Up</button>-->
 
 
-  <!-- Bottom Tab Headers Menu JS -->
-  <script>
+    <!-- Bottom Tab Headers Menu JS -->
+    <!--  <script>
     function openCity(cityName, elmnt, color) {
       // Hide all elements with class="tabcontent" by default */
       var i, tabcontent, tablinks;
@@ -295,7 +305,7 @@ function showSlides() {
 
     // Get the element with id="defaultOpen" and click on it
     document.getElementById("defaultOpen").click();
-  </script>
+  </script>-->
 </body>
 
 </html>

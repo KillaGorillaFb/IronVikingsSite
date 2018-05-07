@@ -92,16 +92,7 @@
     <a href="index.html" class="active">Home</a>
     <a href="fitness.html">Fitness</a>
     <a href="aboutMe.html">About Me</a>
-    <!--<div class="dropdown">
-      <button class="dropbtn">Shop
-      <i class="fa fa-caret-down"></i>
-    </button>
-      <div class="dropdown-content">
-        <a href="shopMen.html">Men</a>
-        <a href="shopWomen.html">Women</a>
-        <a href="shopAccessories.html">Accessories</a>
-      </div>
-    </div>-->
+
     <a href="signUp.html">Sign Up</a>
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
 
@@ -130,46 +121,26 @@
     }
   </script>
 
-<!-- Parallax Starts -->
-<div class="bgimg-1">
-  <div class="caption">
-    <!--<span class="border"></span>-->
-  </div>
-</div>
+  <!-- Parallax Starts -->
+  <style>
+    .row {
+      display: flex;
+    }
 
-<div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
-  <h3 style="text-align:center;">Live Unafraid, Die Strong</h3>
-  <p></p>
-</div>
-
-<!--<div class="bgimg-2">
-  <div class="caption">
-    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;"></span>
-  </div>
-</div>
--->
-
-
-</div>
-
-<div style="position:relative;">
-  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
-    <!--<p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>-->
-  </div>
-</div>
-
-
-
-<div class="topnav" id="myTopnav">
-  <a href="index.html" class="active">Home</a>
-  <a href="fitness.html">Fitness</a>
-  <a href="aboutMe.html">About Me</a>
-  <a href="signUp.html">Sign Up</a>
-<!-- Parallax Ends -->
-  <!-- Parallax HTML -->
-<!--  <div class="bgimg-1">
-    <div class="caption">
-      <span class="border">SCROLL DOWN</span>
+    .column {
+      flex: 33.33%;
+      padding: 5px;
+    }
+  </style>
+  <div class="row">
+    <div class="column">
+      <img src="shirtGirls.png" alt="Fjords" style="width:60%">
+    </div>
+    <div class="column">
+      <img src="shirtGirls.png" alt="Forest" style="width:60%">
+    </div>
+    <div class="column">
+      <img src="shirtGirls.png" alt="Mountains" style="width:60%">
     </div>
   </div>
 
@@ -178,79 +149,25 @@
     <p></p>
   </div>
 
-  <div class="bgimg-2">
-    <div class="caption">
-      <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">LESS HEIGHT</span>
-    </div>
-  </div>
-
 
 
   </div>
 
   <div style="position:relative;">
     <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
-      <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
+      <!--<p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>-->
     </div>
   </div>
 
 
 
+  <div class="topnav" id="myTopnav">
+    <a href="index.html" class="active">Home</a>
+    <a href="fitness.html">Fitness</a>
+    <a href="aboutMe.html">About Me</a>
+    <a href="signUp.html">Sign Up</a>
+    <!-- Parallax Ends -->
 
--->
-  <!-- Bottom Tab Headers HTML -->
-  <!--<div id="London" class="tabcontent">
-    <h3>Home</h3>
-    <p>Look into adding side by side images here!</p>
-  </div>
-
-  <div id="Paris" class="tabcontent">
-    <h3>Fitness</h3>
-    <p>Link to fitness page here.</p>
-  </div>
-
-  <div id="Tokyo" class="tabcontent">
-    <h3>About Me</h3>
-    <p>Info about owner here</p>
-  </div>
-
-  <div id="Oslo" class="tabcontent">
-    <h3>Sign Up</h3>
-    <p>Link to newsletter sign up page here.</p>
-  </div>
-
-  <button class="tablink" onclick="openCity('London', this, '#2F4F4F')" id="defaultOpen">Home</button>
-  <button class="tablink" onclick="openCity('Paris', this, 'black')">Fitness</button>
-  <button class="tablink" onclick="openCity('Tokyo', this, '#2F4F4F')">About Me</button>
-  <button class="tablink" onclick="openCity('Oslo', this, 'black')">Sign Up</button>
-
--->
-  <!-- Bottom Tab Headers Menu JS -->
-  <!--<script>
-    function openCity(cityName, elmnt, color) {
-      // Hide all elements with class="tabcontent" by default */
-      var i, tabcontent, tablinks;
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-      }
-
-      // Remove the background color of all tablinks/buttons
-      tablinks = document.getElementsByClassName("tablink");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].style.backgroundColor = "";
-      }
-
-      // Show the specific tab content
-      document.getElementById(cityName).style.display = "block";
-
-      // Add the specific color to the button used to open the tab content
-      elmnt.style.backgroundColor = color;
-    }
-
-    // Get the element with id="defaultOpen" and click on it
-    document.getElementById("defaultOpen").click();
-  </script>-->
 </body>
 
 </html>
